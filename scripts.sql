@@ -25,5 +25,5 @@ create table resident
             references city
 );
 
-alter table city
+alter table resident
     owner to postgres;
