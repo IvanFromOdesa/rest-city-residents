@@ -2,7 +2,7 @@
 
 REST-based Spring boot web-app.
 
-Used DB: PostgreSQL.
+Used DBMS: PostgreSQL.
 
 SQL scripts for creating db tables can be found at ```scripts.sql```.
 
