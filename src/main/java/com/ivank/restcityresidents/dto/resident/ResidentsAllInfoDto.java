@@ -1,10 +1,12 @@
-package com.ivank.restcityresidents.dto;
+package com.ivank.restcityresidents.dto.resident;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.time.LocalDate;
 
 @AllArgsConstructor
+@Getter
 public class ResidentsAllInfoDto {
     private String firstName;
     private String lastName;

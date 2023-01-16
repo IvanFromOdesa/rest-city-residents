@@ -1,2 +1,15 @@
-package com.ivank.restcityresidents.dto.city;public class CitiesAllInfoDto {
+package com.ivank.restcityresidents.dto.city;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.extern.jackson.Jacksonized;
+
+@Builder
+@Jacksonized
+@Getter
+public class CitiesAllInfoDto {
+    private String officialName;
+    private Long population;
+    private Double area;
+    private String timeZone;
 }
