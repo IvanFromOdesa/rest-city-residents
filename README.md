@@ -6,7 +6,7 @@ Used DBMS: PostgreSQL.
 
 SQL scripts for creating db tables can be found at ```scripts.sql```.
 
-Create db in PostgreSQL (default name and URI to it can be found at ```application.properties```.
+Create db in PostgreSQL (default name and URI to it can be found at ```application.properties```).
 
 Create two tables using scripts from the file in public schema.
 
