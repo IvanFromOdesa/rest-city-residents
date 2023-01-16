@@ -77,6 +77,29 @@ public class CityControllerTests {
     }
 
     @Test
+    public void createCity_timeZoneInvalid() throws Exception {
+        String body = """
+          {
+              "officialName": "Odesa",
+              "population": 900000,
+              "area": 170,
+              "timeZone": "NIDJ"
+          }
+          """;
+
+        MvcResult mvcResult = mvc.perform(post("/api/cities/create")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body)
+                )
+                .andExpect(status().isForbidden())
+                .andReturn();
+
+        assertEquals("{\"status\":403," +
+                "\"error\":\"Forbidden\"," +
+                "\"message\":\"Invalid timezone\"}", mvcResult.getResponse().getContentAsString());
+    }
+
+    @Test
     public void getAllCities_success() throws Exception {
         createSampleCity();
         createSampleCity();
